@@ -38,6 +38,20 @@ src/
 tests/                 # Vitest
 ```
 
+## Kho tri thức: `kb_items` + trang `/admin/kb`
+
+- Schema: `supabase/migrations/20261026000001_kb_items.sql`. DB tự chặn: mẩu `approved` phải có ≥3 nguồn, 80–250 chữ, mỗi bộ khóa chỉ một mẩu approved, không xóa mẩu đã duyệt, server tự đóng dấu người duyệt. RLS: chỉ tài khoản `app_metadata.role = "admin"` đọc/ghi; anon không đọc được (truy xuất RAG chạy bằng service role ở server).
+- Luật validate dùng chung cho UI/import: `src/lib/kb/schema.ts` (tên sao/cung phải khớp engine, cảnh báo từ dễ thành phán/dọa).
+- Trang `/admin/kb`: duyệt từng mẩu (⌘/Ctrl+Enter duyệt & sang mẩu kế, ⌘/Ctrl+S lưu, J/K chuyển), lưới độ phủ 14 chính tinh × 12 cung, nhập JSON nháp do AI soạn.
+- Không có biến môi trường → chế độ demo, lưu localStorage (bản GitHub Pages chạy chế độ này).
+
+Nối Supabase:
+
+1. Tạo project Supabase, chạy file migration trong SQL editor (hoặc `supabase db push`).
+2. Authentication → URL Configuration: thêm URL trang admin (ví dụ `http://localhost:3000/admin/kb`, domain thật) vào Redirect URLs.
+3. Chép `.env.example` thành `.env.local`, điền URL + publishable key.
+4. Mở `/admin/kb`, đăng nhập bằng email (magic link), rồi cấp quyền admin bằng câu SQL trang hiện ra, đăng nhập lại.
+
 ## Đổi thương hiệu, giá
 
 Mọi giá, gói, thuê bao, nạp lẻ và thông tin chủ thể kinh doanh nằm trong `src/lib/site.ts`. Màu, font, component trong `src/app/globals.css` và `src/app/layout.tsx`.

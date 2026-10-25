@@ -8,6 +8,7 @@ import { Chart2D } from "@/components/chart/Chart2D";
 import { Chart3DLazy } from "@/components/chart/Chart3DLazy";
 import { decodeChartId, encodeChartId } from "@/lib/tuvi/codec";
 import { buildChart } from "@/lib/tuvi/engine";
+import { BASE_PATH } from "@/lib/site";
 import type { PalaceName } from "@/lib/tuvi/constants";
 import { AudioTab } from "./AudioTab";
 import { PalaceInspector } from "./PalaceInspector";
@@ -26,9 +27,10 @@ const TABS = [
 
 type TabId = (typeof TABS)[number]["id"];
 
-export function ChartView({ id }: { id: string }) {
+export function ChartView() {
   const router = useRouter();
   const params = useSearchParams();
+  const id = params.get("id") ?? "";
   const decoded = useMemo(() => decodeChartId(id), [id]);
   const [viewYear, setViewYear] = useState(decoded?.viewYear ?? 2026);
   const input = useMemo(() => (decoded ? { ...decoded, viewYear } : null), [decoded, viewYear]);
@@ -72,7 +74,7 @@ export function ChartView({ id }: { id: string }) {
   };
 
   const share = async () => {
-    const url = `${window.location.origin}/la-so/${encodeChartId(input)}`;
+    const url = `${window.location.origin}${BASE_PATH}/la-so?id=${encodeChartId(input)}`;
     try {
       if (navigator.share) await navigator.share({ title: `Lá số ${input.name}`, url });
       else await navigator.clipboard.writeText(url);

@@ -2,6 +2,9 @@
  * Cấu hình thương hiệu và giá — đổi ở đây, toàn site cập nhật theo.
  * "Tinh Đồ" là tên tạm (working name) cho bản thiết kế.
  */
+/** Tiền tố đường dẫn khi chạy dưới thư mục con (GitHub Pages: "/Tu-Vi"); rỗng trên Vercel. */
+export const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export const site = {
   name: "Tinh Đồ",
   tagline: "Tử vi Nam phái, đọc bằng dữ liệu",

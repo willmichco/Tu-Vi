@@ -59,7 +59,7 @@ export function HeroStage({ poster }: { poster: React.ReactNode }) {
             <Hand size={13} /> Kéo để xoay · chạm một cung
           </span>
         )}
-        <Link href={`/la-so/${SAMPLE_ID}`} className="chip bg-ink-950/70 text-gold-300 backdrop-blur hover:text-gold-200">
+        <Link href={`/la-so?id=${SAMPLE_ID}`} className="chip bg-ink-950/70 text-gold-300 backdrop-blur hover:text-gold-200">
           Mở lá số mẫu →
         </Link>
       </div>

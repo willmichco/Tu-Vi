@@ -63,7 +63,7 @@ export function AccountClient() {
         {tab === "la-so" && (
           <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
             {charts.map((c, i) => (
-              <Link key={i} href={`/la-so/${c.id}`} className="card group p-5 transition hover:bg-white/[0.045]">
+              <Link key={i} href={`/la-so?id=${c.id}`} className="card group p-5 transition hover:bg-white/[0.045]">
                 <div className="flex items-center justify-between">
                   <span className={`chip text-[11px] ${c.plan === "Miễn phí" ? "text-cream-dim" : "text-gold-300"}`}>{c.plan}</span>
                   <span className="font-mono text-[10.5px] text-cream-mute">engine 0.1.0</span>
@@ -106,7 +106,7 @@ export function AccountClient() {
                 </div>
                 <div className="flex gap-2">
                   {c.quota > 0 && (
-                    <Link href="/thanh-toan/TD7K2Q9M?plan=xu-50" className="btn btn-secondary btn-sm">
+                    <Link href="/thanh-toan?order=TD7K2Q9M&plan=xu-50" className="btn btn-secondary btn-sm">
                       Nạp lẻ lượt hỏi
                     </Link>
                   )}
@@ -135,7 +135,7 @@ export function AccountClient() {
               </div>
               <div className="flex flex-wrap gap-2">
                 {addons.xuPacks.map((x) => (
-                  <Link key={x} href={`/thanh-toan/TD7K2Q9M?plan=xu-${x}`} className="btn btn-secondary btn-sm">
+                  <Link key={x} href={`/thanh-toan?order=TD7K2Q9M&plan=xu-${x}`} className="btn btn-secondary btn-sm">
                     +{x} xu
                   </Link>
                 ))}

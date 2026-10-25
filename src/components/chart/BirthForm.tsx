@@ -88,7 +88,7 @@ export function BirthForm({
     e.preventDefault();
     setTouched(true);
     if (!canSubmit) return;
-    router.push(`/la-so/${encodeChartId(input)}`);
+    router.push(`/la-so?id=${encodeChartId(input)}`);
   }
 
   const isHero = variant === "hero";

@@ -2,7 +2,7 @@ import type { BirthInput } from "./engine";
 
 /**
  * Bản thiết kế chưa có database: id lá số = dữ liệu sinh mã hóa base64url.
- * Khi nối Supabase, id sẽ là charts.id (uuid) và trang /la-so/[id] đọc từ API.
+ * Khi nối Supabase, id sẽ là charts.id (uuid) và trang /la-so?id= đọc từ API.
  */
 export const SAMPLE_ID = "mau";
 

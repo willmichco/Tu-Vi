@@ -14,9 +14,12 @@ npm run typecheck
 npm run build
 ```
 
-Trang nên xem trước: `/`, `/lap-la-so`, `/la-so/mau` (lá số mẫu, thêm `?plan=chuyen-sau` để xem trạng thái đã mở khóa), `/tu-vi-tinh-duyen`, `/bang-gia`, `/thanh-toan/TD7K2Q9M?plan=chuyen-sau`.
+Trang nên xem trước: `/`, `/lap-la-so`, `/la-so?id=mau` (lá số mẫu, thêm `&plan=chuyen-sau` để xem trạng thái đã mở khóa), `/tu-vi-tinh-duyen`, `/bang-gia`, `/thanh-toan?order=TD7K2Q9M&plan=chuyen-sau`.
 
-Deploy: kết nối repo với Vercel, không cần biến môi trường cho bản thiết kế.
+Deploy:
+
+- **GitHub Pages** (bản xem trước tĩnh): workflow `.github/workflows/pages.yml` tự build `GITHUB_PAGES=true next build` → `out/` và deploy. Bắt buộc vào *Settings → Pages → Source* chọn **GitHub Actions** (nếu để "Deploy from a branch", GitHub chỉ hiển thị README này).
+- **Vercel**: kết nối repo, không cần biến môi trường cho bản thiết kế.
 
 ## Cấu trúc
 

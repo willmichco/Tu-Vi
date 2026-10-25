@@ -38,7 +38,7 @@ export function PricingCards() {
             ))}
           </ul>
           <Link
-            href={p.price ? `/thanh-toan/TD7K2Q9M?plan=${p.code}` : "/lap-la-so"}
+            href={p.price ? `/thanh-toan?order=TD7K2Q9M&plan=${p.code}` : "/lap-la-so"}
             className={`btn mt-7 w-full ${p.highlight ? "btn-primary" : "btn-secondary"}`}
           >
             {p.cta}

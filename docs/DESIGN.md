@@ -50,13 +50,13 @@ Giữ lại tinh thần đúng của Thiên Bàn: “không chấm điểm”, g
 |---|---|
 | `/` | Hero + form nhanh + bàn sao 3D, số liệu minh bạch, 6 cách xem, pipeline AI 5 bước, “không làm gì”, so sánh, bảng giá, FAQ (FAQPage), bài nên đọc |
 | `/lap-la-so` | Form đầy đủ: âm/dương, tháng nhuận (chỉ hiện khi năm có nhuận), 12 canh giờ, Tý sớm/muộn, không nhớ giờ, UTC+8 cho miền Nam 1968–1975, năm xem hạn, đồng ý điều khoản + đồng ý của người được lập lá. Xem trước lá 2D trực tiếp |
-| `/la-so/[id]` | 6 tab 3D / 2D / Luận giải / Vận hạn / Hỏi đáp / Audio; bảng chi tiết cung; paywall mờ + mở khóa; thanh tab dưới cho mobile; noindex |
+| `/la-so?id=` | 6 tab 3D / 2D / Luận giải / Vận hạn / Hỏi đáp / Audio; bảng chi tiết cung; paywall mờ + mở khóa; thanh tab dưới cho mobile; noindex |
 | `/tu-vi-audio` | Nghe thử 20 giây, 4 lý do, mục lục podcast, so sánh chatbot |
 | `/tu-vi-tinh-duyen` | Form hai người → **bản xem thử tính thật** (chân dung, Phu Thê, trục đại vận chồng theo năm 2026–2046), 6 phần, 3 bậc giá |
 | `/lich-van-han` | Lịch tháng: mỗi ngày một cung (lưu nguyệt theo Đẩu Quân, lưu nhật đi thuận), giá thuê bao niêm yết |
 | `/hoc-tu-vi`, `/bai-viet/[slug]` | Tìm kiếm không dấu, lọc danh mục, từ điển 14 chính tinh + 12 cung; 6 bài nền tảng (Article + BreadcrumbList) |
 | `/bang-gia` | 4 gói, bảng so sánh, ví xu, nạp lẻ, thuê bao, Tình duyên, VietQR, hoàn tiền, FAQ |
-| `/thanh-toan/[orderId]` | QR, số tiền, nội dung CK có nút chép, đếm ngược 30 phút, 4 bước trạng thái, màn hình kích hoạt |
+| `/thanh-toan?order=` | QR, số tiền, nội dung CK có nút chép, đếm ngược 30 phút, 4 bước trạng thái, màn hình kích hoạt |
 | `/tai-khoan` | Lá số của tôi, gói & lượt hỏi, ví xu + sổ cái, đơn hàng + yêu cầu hóa đơn, xóa lá/xóa tài khoản |
 | `/dang-nhap` | Google OAuth |
 | `/dieu-khoan`, `/chinh-sach-du-lieu`, `/hoan-tien`, `/tuyen-bo-ai`, `/lien-he` | Bản nháp theo mục 4 và 13 |

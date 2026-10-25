@@ -4,13 +4,14 @@ import { Billboard, Line, OrbitControls, Stars, Text } from "@react-three/drei";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { useEffect, useMemo, useRef, useState } from "react";
 import * as THREE from "three";
+import { BASE_PATH } from "@/lib/site";
 import { CHI } from "@/lib/lunar";
 import { relationsOf, type Chart, type PlacedStar } from "@/lib/tuvi/engine";
 import { BRIGHTNESS_OPACITY, ELEMENT_COLOR, HOA_COLOR } from "./starStyle";
 
 const R = 5;
-const FONT = "/fonts/BeVietnamPro-Medium.ttf";
-const FONT_BOLD = "/fonts/BeVietnamPro-SemiBold.ttf";
+const FONT = `${BASE_PATH}/fonts/BeVietnamPro-Medium.ttf`;
+const FONT_BOLD = `${BASE_PATH}/fonts/BeVietnamPro-SemiBold.ttf`;
 
 /** Tý hơi lệch phải ở phía trước, chi tăng theo chiều kim đồng hồ khi nhìn trên màn hình — khớp lá 2D. */
 const thetaOf = (chi: number) => ((chi * 30 - 15) * Math.PI) / 180;

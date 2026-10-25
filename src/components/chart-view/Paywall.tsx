@@ -31,7 +31,7 @@ export function Paywall({
             {options.map((p) => (
               <Link
                 key={p.code}
-                href={`/thanh-toan/TD7K2Q9M?plan=${p.code}&chart=${chartId}`}
+                href={`/thanh-toan?order=TD7K2Q9M&plan=${p.code}&chart=${chartId}`}
                 className={`group rounded-xl border p-4 transition ${
                   p.code === highlight
                     ? "border-gold-400/60 bg-gold-400/[0.07] hover:bg-gold-400/[0.11]"

@@ -37,8 +37,9 @@ function CopyRow({ label, value, mono = true }: { label: string; value: string; 
   );
 }
 
-export function CheckoutClient({ orderId }: { orderId: string }) {
+export function CheckoutClient() {
   const params = useSearchParams();
+  const orderId = (params.get("order") ?? "TD7K2Q9M").toUpperCase().slice(0, 12);
   const item = orderItem(params.get("plan"));
   const chart = params.get("chart") ?? "mau";
   const [qr, setQr] = useState("");
@@ -120,7 +121,7 @@ export function CheckoutClient({ orderId }: { orderId: string }) {
             <CheckCircle2 size={48} className="mx-auto text-jade" />
             <h2 className="mt-4 font-serif text-3xl text-cream">Đã kích hoạt {item.name}</h2>
             <p className="mx-auto mt-2 max-w-md text-cream-dim">Biên nhận đã gửi qua email. Nội dung của lá số được mở khóa ngay bây giờ.</p>
-            <Link href={`/la-so/${chart}?plan=chuyen-sau&tab=luan-giai`} className="btn btn-primary btn-lg mt-8">
+            <Link href={`/la-so?id=${chart}&plan=chuyen-sau&tab=luan-giai`} className="btn btn-primary btn-lg mt-8">
               <Sparkles size={18} /> Mở lá số đã mở khóa
             </Link>
           </div>

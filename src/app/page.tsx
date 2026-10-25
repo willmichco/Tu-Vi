@@ -120,7 +120,7 @@ export default function Home() {
           desc="Quen lá giấy có lưới 2D. Thích chiêm nghiệm có bầu trời 3D. Muốn hỏi thêm có trợ lý bám kho tri thức. Muốn nghe có podcast hai giọng."
         />
         <div className="mt-12 grid gap-4 md:grid-cols-6">
-          <Link href="/la-so/mau" className="card group relative overflow-hidden p-6 md:col-span-4 md:row-span-2">
+          <Link href="/la-so?id=mau" className="card group relative overflow-hidden p-6 md:col-span-4 md:row-span-2">
             <div className="flex items-center gap-2 text-gold-300">
               <Box size={18} />
               <span className="eyebrow">Bàn sao 3D</span>

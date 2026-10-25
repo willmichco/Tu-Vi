@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-export default async function Page({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = await params;
+// Mã lá số nằm ở ?id= để trang build tĩnh được (GitHub Pages) — không cần server.
+export default function Page() {
   return (
     <Suspense>
-      <ChartView id={id} />
+      <ChartView />
     </Suspense>
   );
 }

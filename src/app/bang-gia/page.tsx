@@ -90,7 +90,7 @@ export default function Page() {
             </ul>
             <div className="mt-6 grid grid-cols-4 gap-2">
               {addons.xuPacks.map((x) => (
-                <Link key={x} href={`/thanh-toan/TD7K2Q9M?plan=xu-${x}`} className="rounded-xl border border-[var(--line-strong)] py-3 text-center hover:border-gold-400/50">
+                <Link key={x} href={`/thanh-toan?order=TD7K2Q9M&plan=xu-${x}`} className="rounded-xl border border-[var(--line-strong)] py-3 text-center hover:border-gold-400/50">
                   <div className="font-serif text-lg text-cream">{x}</div>
                   <div className="font-mono text-[10px] text-cream-mute">xu</div>
                 </Link>

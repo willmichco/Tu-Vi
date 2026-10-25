@@ -218,7 +218,7 @@ export function TinhDuyenClient() {
                 <div className="mt-3 font-serif text-xl text-cream">Đọc trọn 6 phần của bản đối chiếu</div>
                 <div className="mt-4 grid grid-cols-3 gap-2 text-sm">
                   {addons.tinhDuyen.map((t) => (
-                    <Link key={t.code} href={`/thanh-toan/TD7K2Q9M?plan=${t.code}`} className="rounded-xl border border-[var(--line-strong)] p-3 hover:border-gold-400/50">
+                    <Link key={t.code} href={`/thanh-toan?order=TD7K2Q9M&plan=${t.code}`} className="rounded-xl border border-[var(--line-strong)] p-3 hover:border-gold-400/50">
                       <div className="text-cream-dim">{t.name}</div>
                       <div className="mt-1 font-serif text-lg text-gold-300">{vnd(t.price)}</div>
                     </Link>

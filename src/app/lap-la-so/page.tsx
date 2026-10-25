@@ -26,10 +26,9 @@ export default function Page() {
       <div className="container-x relative py-10 sm:py-14">
         <div className="max-w-2xl">
           <span className="eyebrow">01 · Lập lá số</span>
-          <h1 className="h-display mt-3 text-4xl sm:text-5xl">Nhập giờ sinh, lá số hiện ngay</h1>
+          <h1 className="h-display mt-3 text-4xl sm:text-5xl">Khởi đầu hành trình hiểu mình</h1>
           <p className="mt-4 text-[17px] leading-relaxed text-cream-dim">
-            An sao theo phép Nam phái, tính ngay trên máy của bạn. Nhập dương lịch hay âm lịch đều được — tháng nhuận và giờ Tý
-            sớm/muộn có quy ước rõ ràng.
+            Một vài thông tin về ngày giờ sinh sẽ mở ra bản đồ 12 cung của bạn. Theo dõi lá số cập nhật ngay bên cạnh khi bạn điền thông tin.
           </p>
         </div>
         <div className="mt-10">

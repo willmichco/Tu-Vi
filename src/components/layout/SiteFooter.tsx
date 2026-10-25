@@ -36,7 +36,7 @@ const cols = [
 
 export function SiteFooter() {
   return (
-    <footer className="relative mt-24 border-t border-[var(--line)] bg-ink-950">
+    <footer className="relative mt-0 border-t border-[var(--line)] bg-ink-950">
       <div className="container-x grid gap-12 py-14 md:grid-cols-[1.4fr_repeat(3,1fr)]">
         <div className="max-w-sm">
           <div className="flex items-center gap-2.5">
@@ -49,7 +49,7 @@ export function SiteFooter() {
           </p>
           <div className="mt-5 inline-flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 font-mono text-[11px] text-cream-dim">
             <span className="size-1.5 animate-pulse-dot rounded-full bg-jade" />
-            Hệ thống hoạt động bình thường
+            Tử vi Nam phái · Góc nhìn đương đại
           </div>
         </div>
         {cols.map((col) => (
@@ -70,7 +70,7 @@ export function SiteFooter() {
       <div className="border-t border-[var(--line)]">
         <div className="container-x flex flex-col gap-3 py-6 text-xs leading-relaxed text-cream-mute md:flex-row md:items-center md:justify-between">
           <p>
-            © {new Date().getFullYear()} {site.name} · {site.business.legalName} · MST {site.business.taxCode}
+            © {new Date().getFullYear()} {site.name} · Hiểu mình, sống an nhiên.
           </p>
           <p>Nội dung do AI viết dựa trên kho tri thức, chỉ mang tính tham khảo, chiêm nghiệm.</p>
         </div>

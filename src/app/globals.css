@@ -323,3 +323,70 @@ body {
     scroll-behavior: auto !important;
   }
 }
+
+/* Tinh Đồ — editorial jade and antique brass */
+:root { --color-ink-950:#102e2a; --color-ink-900:#153630; --color-ink-850:#193d36; --color-ink-800:#20463e; --color-ink-700:#295449; --color-ink-600:#376358; --color-cream:#f5f0e5; --color-cream-dim:#b9c7ba; --color-cream-mute:#94ac9f; --color-gold-200:#f0dfb8; --color-gold-300:#dfc58e; --color-gold-400:#cfb176; --color-gold-500:#b79559; --line:rgb(218 222 198 / .13); --line-strong:rgb(218 222 198 / .24); }
+body { line-height:1.65; }
+header { background:#102e2af2; border-bottom:1px solid var(--line)!important; }
+.btn { border-radius:6px; }
+.btn-primary { background:#dec38e; box-shadow:none; color:#17372e; }
+.btn-primary:hover { background:#ecd6ad; box-shadow:0 6px 20px #0002; transform:translateY(-2px); }
+.card,.glass { background:#ffffff04; border-radius:12px; }
+.input { background:#ffffff07; border-radius:6px; }
+.eyebrow { font-family:var(--font-sans); font-size:10px; letter-spacing:.2em; font-weight:600; }
+h2 { font-family:var(--font-serif); font-weight:400; font-size:clamp(29px,3vw,43px); line-height:1.3; letter-spacing:-.035em; }
+.editorial-hero { background:radial-gradient(ellipse at 80% 40%,#2d5140 0,transparent 58%),#102e2a; overflow:hidden; }
+.hero-layout { display:grid; grid-template-columns:1.05fr 1fr; align-items:center; min-height:640px; gap:40px; }
+.hero-copy { padding:65px 0; }
+.hero-copy h1 { font-family:var(--font-serif); font-size:clamp(42px,4.6vw,66px); font-weight:400; line-height:1.2; letter-spacing:-.045em; margin-top:28px; }
+.hero-copy h1 em,.wisdom-inner em { font-weight:400; color:#d7ba80; }
+.hero-description { color:#becbbd; max-width:450px; margin-top:26px; font-size:16px; line-height:1.9; }
+.celestial-art { position:relative; color:#d3b87f; width:100%; }
+.celestial-art svg { width:100%; filter:drop-shadow(0 0 25px #d6ad4e18); }
+.dial-caption { display:block; text-align:center; font-size:10px; letter-spacing:.4em; margin-top:-10px; }
+.hero-bottom { border-top:1px solid var(--line); display:flex; justify-content:space-between; padding-top:22px; padding-bottom:22px; font-size:9px; letter-spacing:.17em; color:#aebdaf; }
+.paper-section { background:#f1eee5; color:#233e32; padding:90px 0; --color-cream:#233e32; --color-cream-dim:#586b5e; --color-cream-mute:#69796c; --color-gold-400:#896b38; --color-gold-300:#896b38; --line:#25472e1a; --line-strong:#25472e33; --color-ink-800:#fffdf8; --color-ink-950:#fffdf8; }
+.birth-layout { display:grid; grid-template-columns:.85fr 1.15fr; gap:90px; align-items:center; }
+.birth-layout h2 { margin-top:20px; font-size:clamp(34px,3.4vw,48px); }
+.section-description { margin-top:22px; max-width:390px; color:var(--color-cream-dim); font-size:15px; line-height:1.9; }
+.birth-note { margin-top:35px; display:flex; gap:18px; align-items:center; border-top:1px solid #28492b24; padding-top:25px; font-size:13px; color:#62715f; }
+.birth-note>span { font-size:30px; color:#a58951; }
+.birth-panel { background:#fffdf7; padding:32px; border:1px solid #dcded1; border-radius:12px; box-shadow:0 20px 60px #203c2910; }
+.paper-section .input { background:white; }
+.paper-section .seg>button[aria-pressed="true"] { background:#21483b; color:#fff; }
+.discovery-section { padding-top:90px; padding-bottom:90px; }
+.section-heading { display:flex; align-items:end; justify-content:space-between; gap:25px; margin-bottom:38px; }
+.section-heading h2,.faq-layout h2 { margin-top:15px; }
+.section-heading>p { color:var(--color-cream-dim); font-size:14px; }
+.discovery-grid,.article-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; }
+.discovery-card { padding:30px; border:1px solid var(--line-strong); transition:background .2s,transform .2s; background:#ffffff03; }
+.discovery-card:hover { background:#ffffff08; transform:translateY(-4px); }
+.discovery-card svg { color:#d2b47b; }
+.discovery-card .flex>span { color:#91a899; font-size:11px; }
+.discovery-card h3 { font-family:var(--font-serif); font-size:25px; margin:35px 0 13px; }
+.discovery-card p { color:#b7c5b7; font-size:14px; line-height:1.9; }
+.discovery-link { display:flex; justify-content:space-between; border-top:1px solid var(--line); padding-top:23px; margin-top:28px; color:#dfc58e; font-size:12px; }
+.wisdom-section { background:#1b3c32; border-block:1px solid var(--line); text-align:center; }
+.wisdom-inner { padding-block:70px; }
+.wisdom-symbol { font-size:55px; color:#cfb176; }
+.wisdom-inner h2 { margin-top:25px; line-height:1.5; }
+.journal-art { height:210px; display:grid; place-content:center; justify-items:center; gap:22px; background:radial-gradient(circle,#426454,#233e34); color:#d7c49b; }
+.journal-art-1 { background:radial-gradient(circle,#72684d,#464530); }
+.journal-art-2 { background:radial-gradient(circle,#5b6965,#2c4440); }
+.journal-art span { font-size:9px; letter-spacing:.25em; }
+.journal-card h3 { font-family:var(--font-serif); font-size:23px; line-height:1.5; margin-top:12px; }
+.journal-read { display:flex; align-items:center; gap:12px; margin-top:18px; font-size:12px; color:#becbbd; }
+.journal-card:hover h3 { color:#dfc58e; }
+.faq-layout { display:grid; grid-template-columns:1fr 1.2fr; gap:70px; border-top:1px solid var(--line); padding-top:70px; padding-bottom:90px; }
+@media(max-width:900px) { .hero-layout { gap:0; min-height:0; } .hero-copy h1 { font-size:44px; } .birth-layout { gap:35px; } .discovery-card { padding:22px; } }
+@media(max-width:640px) { .hero-layout,.birth-layout,.faq-layout { grid-template-columns:1fr; } .hero-copy { padding:50px 0 15px; } .hero-copy h1 { font-size:43px; } .celestial-art { max-width:330px; margin:10px auto 30px; } .hero-bottom span:last-child { display:none; } .paper-section,.discovery-section { padding-block:55px; } .birth-panel { padding:22px; } .birth-layout { gap:30px; } .section-heading { display:block; } .section-heading>p,.section-heading>a { margin-top:20px; } .discovery-grid,.article-grid { grid-template-columns:1fr; } .discovery-card h3 { margin-top:24px; } .faq-layout { gap:30px; padding-block:55px; } .journal-art { height:190px; } }
+.paper-section { color-scheme:light; --color-gold-200:#785929; --color-gold-500:#896b38; --color-jade:#27644a; --color-ember:#ad3c2c; }
+.form-workbench { padding:30px; border-radius:12px; border:1px solid #e4dfcf; box-shadow:0 20px 60px #0002; }
+.form-heading { margin-bottom:28px; padding-bottom:22px; border-bottom:1px solid #29463520; }
+.form-heading h2 { font-size:30px; margin-top:10px; }
+.form-heading p { color:#586b5e; font-size:13px; margin-top:10px; }
+header nav a[aria-current="page"] { color:#e6ce9a; background:#dfc58e10; }
+footer { background:#0b241f!important; }
+footer .eyebrow { color:#d2b47b; }
+html { scroll-padding-top:85px; }
+@media(max-width:640px) { .form-workbench { padding:22px; } header .container-x { gap:12px; } }

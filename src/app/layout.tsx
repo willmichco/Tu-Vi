@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Be_Vietnam_Pro, JetBrains_Mono, Noto_Serif } from "next/font/google";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
-import { site } from "@/lib/site";
+import { IS_PREVIEW, site } from "@/lib/site";
 import "./globals.css";
 
 const sans = Be_Vietnam_Pro({
@@ -41,6 +41,7 @@ export const metadata: Metadata = {
     description: site.description,
   },
   alternates: { canonical: "/" },
+  ...(IS_PREVIEW && { robots: { index: false, follow: false } }),
 };
 
 export const viewport: Viewport = {

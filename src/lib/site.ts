@@ -4,6 +4,8 @@
  */
 /** Tiền tố đường dẫn khi chạy dưới thư mục con (GitHub Pages: "/Tu-Vi"); rỗng trên Vercel. */
 export const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+/** Bản xem trước trên GitHub Pages: chặn công cụ tìm kiếm index. */
+export const IS_PREVIEW = BASE_PATH !== "";
 
 export const site = {
   name: "Tinh Đồ",

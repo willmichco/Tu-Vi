@@ -6,8 +6,8 @@ export function LegalPage({ eyebrow, title, updated, intro, body }: { eyebrow: s
   return (
     <div className="container-x py-12 sm:py-16">
       <div className="grid gap-12 lg:grid-cols-[minmax(0,720px)_1fr]">
-        <article>
-          <span className="eyebrow">{eyebrow}</span>
+        <article className="intro">
+          <span className="kicker">{eyebrow}</span>
           <h1 className="h-display mt-3 text-4xl sm:text-5xl">{title}</h1>
           <p className="mt-4 text-lg leading-relaxed text-cream-dim">{intro}</p>
           <div className="mt-4 font-mono text-[11.5px] text-cream-mute">Cập nhật {updated}</div>

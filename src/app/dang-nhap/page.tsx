@@ -12,7 +12,7 @@ export default function Page() {
       <div className="pointer-events-none absolute inset-0 starfield opacity-60" />
       <div className="pointer-events-none absolute top-0 left-1/2 size-[640px] -translate-x-1/2 glow-gold" />
       <div className="container-x relative grid min-h-[72vh] place-items-center py-14">
-        <div className="glass-strong w-full max-w-md rounded-3xl p-7 sm:p-9">
+        <div className="intro glass-strong w-full max-w-md rounded-3xl p-7 sm:p-9">
           <LogoMark size={36} />
           <h1 className="mt-6 font-serif text-3xl text-cream">Đăng nhập để lưu lá số</h1>
           <p className="mt-2 text-sm leading-relaxed text-cream-dim">Xem lá số không cần đăng nhập. Đăng nhập để lưu lá, mua gói và dùng ví xu.</p>

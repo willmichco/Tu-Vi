@@ -4,18 +4,21 @@ import { plans, site, vnd } from "@/lib/site";
 
 export function PricingCards() {
   return (
-    <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+    <div data-stagger className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
       {plans.map((p) => (
         <div
           key={p.code}
-          className={`relative flex flex-col rounded-2xl p-6 ${
-            p.highlight ? "glass-strong ring-1 ring-gold-400/50 shadow-[0_30px_80px_-30px_rgb(231_192_122/0.35)]" : "card"
+          className={`card-lift relative flex flex-col rounded-3xl p-7 transition-[transform,border-color] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+            p.highlight ? "ring-anim spotlight glass-strong shadow-[0_40px_100px_-30px_rgb(231_192_122/0.4)] xl:-my-3 xl:py-10" : "card"
           }`}
         >
           {p.highlight && (
-            <span className="absolute -top-3 left-6 rounded-full bg-gold-400 px-2.5 py-0.5 text-[11px] font-semibold tracking-wide text-ink-950">
-              ĐƯỢC CHỌN NHIỀU NHẤT
-            </span>
+            <>
+              <span className="ring-anim-border" />
+              <span className="absolute -top-3 left-7 z-10 rounded-full bg-gradient-to-b from-gold-200 to-gold-400 px-3 py-1 font-mono text-[10px] font-semibold tracking-[0.14em] text-ink-950 uppercase shadow-[0_6px_20px_-4px_rgb(231_192_122/0.7)]">
+                Được chọn nhiều nhất
+              </span>
+            </>
           )}
           <h3 className="font-serif text-2xl text-cream">{p.name}</h3>
           <span className="mt-1 font-mono text-[11px] text-cream-mute">

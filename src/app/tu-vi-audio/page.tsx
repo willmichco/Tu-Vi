@@ -4,6 +4,7 @@ import { BookMarked, Check, Ear, Headphones, Mic2, Sparkles, Users, X } from "lu
 import { SectionHead } from "@/components/ui/Section";
 import { Waveform } from "@/components/ui/Waveform";
 import { PODCAST_CHAPTERS, SAMPLE_TRANSCRIPT } from "@/content/kb";
+import { Sky } from "@/components/motion/Sky";
 
 export const metadata: Metadata = {
   title: "Tử vi Audio — nghe lá số của bạn bằng hai giọng AI",
@@ -29,16 +30,16 @@ const rows = [
 export default function Page() {
   return (
     <>
-      <section className="relative overflow-hidden">
-        <div className="pointer-events-none absolute inset-0 starfield opacity-60" />
+      <section className="relative -mt-16 overflow-hidden pt-16">
+        <Sky />
         <div className="pointer-events-none absolute -top-20 left-1/2 size-[760px] -translate-x-1/2 glow-silver" />
         <div className="container-x relative grid items-center gap-12 py-14 lg:grid-cols-2 lg:py-24">
-          <div>
-            <span className="eyebrow !text-silver">Tử vi Audio</span>
+          <div className="intro">
+            <span className="kicker !text-silver">Tử vi Audio</span>
             <h1 className="h-display mt-4 text-[40px] leading-[1.08] sm:text-[56px]">
               Đừng chỉ đọc lá số.
               <br />
-              <span className="text-gold-gradient">Hãy nghe nó kể chuyện.</span>
+              <span className="h-accent text-gold-gradient">Hãy nghe nó kể chuyện.</span>
             </h1>
             <p className="mt-5 max-w-lg text-[17px] leading-relaxed text-cream-dim">
               Hai giọng AI trò chuyện 25–30 phút về đúng lá số của bạn, dựng từ kho tri thức đã duyệt. Đeo tai nghe, nhắm mắt, và nghe

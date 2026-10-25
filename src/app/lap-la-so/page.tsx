@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import { LapLaSoClient } from "./LapLaSoClient";
+import { Sky } from "@/components/motion/Sky";
 
 export const metadata: Metadata = {
   title: "Lập lá số tử vi miễn phí — an sao Nam phái",
@@ -21,11 +22,12 @@ const webAppLd = {
 
 export default function Page() {
   return (
-    <div className="relative">
+    <div className="relative -mt-16 pt-16">
+      <Sky shooting={false} className="bottom-auto h-[680px] [mask-image:linear-gradient(#000_60%,transparent)]" />
       <div className="pointer-events-none absolute inset-x-0 top-0 h-[520px] grid-bg" />
       <div className="container-x relative py-10 sm:py-14">
-        <div className="max-w-2xl">
-          <span className="eyebrow">01 · Lập lá số</span>
+        <div className="intro max-w-2xl">
+          <span className="kicker">01 · Lập lá số</span>
           <h1 className="h-display mt-3 text-4xl sm:text-5xl">Nhập giờ sinh, lá số hiện ngay</h1>
           <p className="mt-4 text-[17px] leading-relaxed text-cream-dim">
             An sao theo phép Nam phái, tính ngay trên máy của bạn. Nhập dương lịch hay âm lịch đều được — tháng nhuận và giờ Tý
@@ -37,7 +39,7 @@ export default function Page() {
             <LapLaSoClient />
           </Suspense>
         </div>
-        <div className="mt-14 grid gap-4 sm:grid-cols-3">
+        <div data-stagger className="mt-14 grid gap-4 sm:grid-cols-3">
           {[
             ["Tháng nhuận", "Ngày 1–15 của tháng nhuận an theo tháng chính, từ ngày 16 an sang tháng sau. Ô “tháng nhuận” chỉ hiện khi năm đó thật sự có tháng nhuận."],
             ["Giờ Tý", "Tý sớm (0–1h) tính cho ngày sinh; Tý muộn (23–24h) tính sang ngày hôm sau. Bạn chọn rõ, hệ thống không đoán."],

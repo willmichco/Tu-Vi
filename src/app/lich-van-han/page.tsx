@@ -17,8 +17,8 @@ export default function Page() {
       <div className="pointer-events-none absolute inset-x-0 top-0 h-[480px] grid-bg" />
       <div className="container-x relative py-12 sm:py-16">
         <div className="grid gap-8 lg:grid-cols-[1.3fr_1fr] lg:items-end">
-          <div>
-            <span className="eyebrow">Lịch vận hạn</span>
+          <div className="intro">
+            <span className="kicker">Lịch vận hạn</span>
             <h1 className="h-display mt-3 text-4xl sm:text-5xl">Mỗi ngày trong tháng, một cung trên lá số của bạn</h1>
             <p className="mt-4 max-w-2xl text-[17px] leading-relaxed text-cream-dim">
               Lịch biết hôm nay chạm vào chủ đề nào của đời sống — công việc, tài chính, tình cảm… — kèm phép tính đằng sau. Không phán kết quả,

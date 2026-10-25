@@ -11,8 +11,8 @@ export const metadata: Metadata = {
 export default function Page() {
   const b = site.business;
   return (
-    <div className="container-x py-12 sm:py-16">
-      <span className="eyebrow">Liên hệ</span>
+    <div className="intro container-x py-12 sm:py-16">
+      <span className="kicker">Liên hệ</span>
       <h1 className="h-display mt-3 text-4xl sm:text-5xl">Một người vận hành, trả lời trong 1–2 ngày làm việc</h1>
       <div className="mt-10 grid gap-6 lg:grid-cols-[1.2fr_1fr]">
         <form className="card space-y-4 p-6 sm:p-8">

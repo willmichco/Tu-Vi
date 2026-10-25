@@ -36,8 +36,9 @@ const cols = [
 
 export function SiteFooter() {
   return (
-    <footer className="relative mt-24 border-t border-[var(--line)] bg-ink-950">
-      <div className="container-x grid gap-12 py-14 md:grid-cols-[1.4fr_repeat(3,1fr)]">
+    <footer className="relative mt-24 overflow-hidden border-t border-[var(--line)] bg-ink-950">
+      <div className="pointer-events-none absolute -bottom-64 left-1/2 size-[720px] -translate-x-1/2 glow-gold opacity-60" />
+      <div className="container-x relative grid gap-12 py-16 md:grid-cols-[1.4fr_repeat(3,1fr)]">
         <div className="max-w-sm">
           <div className="flex items-center gap-2.5">
             <LogoMark />
@@ -58,7 +59,8 @@ export function SiteFooter() {
             <ul className="mt-4 space-y-2.5">
               {col.links.map(([href, label]) => (
                 <li key={href}>
-                  <Link href={href} className="text-sm text-cream-dim transition hover:text-cream">
+                  <Link href={href} className="group inline-flex items-center gap-1.5 text-sm text-cream-dim transition-colors hover:text-cream">
+                    <span className="h-px w-0 bg-gold-400 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:w-3" />
                     {label}
                   </Link>
                 </li>
@@ -67,7 +69,13 @@ export function SiteFooter() {
           </div>
         ))}
       </div>
-      <div className="border-t border-[var(--line)]">
+      {/* Chữ thương hiệu cỡ lớn, mờ dần xuống đáy */}
+      <div aria-hidden="true" className="relative container-x -mt-4 select-none">
+        <div className="bg-gradient-to-b from-cream/[0.09] to-transparent bg-clip-text text-center font-serif text-[27vw] leading-[0.82] font-light tracking-[-0.05em] text-transparent italic lg:text-[300px]">
+          {site.name}
+        </div>
+      </div>
+      <div className="relative border-t border-[var(--line)]">
         <div className="container-x flex flex-col gap-3 py-6 text-xs leading-relaxed text-cream-mute md:flex-row md:items-center md:justify-between">
           <p>
             © {new Date().getFullYear()} {site.name} · {site.business.legalName} · MST {site.business.taxCode}

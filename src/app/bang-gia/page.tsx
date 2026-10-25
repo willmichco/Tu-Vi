@@ -6,6 +6,7 @@ import { Faq } from "@/components/ui/Faq";
 import { SectionHead } from "@/components/ui/Section";
 import { pricingFaq } from "@/content/faq";
 import { addons, compareRows, plans, vnd } from "@/lib/site";
+import { Sky } from "@/components/motion/Sky";
 
 export const metadata: Metadata = {
   title: "Bảng giá — niêm yết công khai mọi gói, thuê bao và nạp lẻ",
@@ -15,14 +16,19 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative -mt-16 overflow-hidden pt-16">
+      <Sky shooting={false} className="bottom-auto h-[760px] [mask-image:linear-gradient(#000_55%,transparent)]" />
       <div className="pointer-events-none absolute top-0 left-1/2 size-[760px] -translate-x-1/2 glow-gold opacity-60" />
       <div className="container-x relative py-12 sm:py-16">
         <SectionHead
           as="h1"
           align="center"
           eyebrow="Bảng giá niêm yết"
-          title={<>Mọi mức giá đều nằm ở trang này</>}
+          title={
+            <>
+              Mọi mức giá <span className="h-accent text-gold-gradient">đều nằm ở trang này</span>
+            </>
+          }
           desc="Không phải nhắn tin hỏi giá. Gói trả một lần cho từng lá, không tự gia hạn. Thuê bao và nạp lẻ trả bằng xu, cũng niêm yết đầy đủ."
         />
         <div className="mt-12">

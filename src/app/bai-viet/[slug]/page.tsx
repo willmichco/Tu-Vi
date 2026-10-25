@@ -60,8 +60,8 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         / <span className="text-cream-dim">{a.category}</span>
       </nav>
       <div className="mt-6 grid gap-12 lg:grid-cols-[minmax(0,720px)_1fr]">
-        <article>
-          <div className="eyebrow">{a.category}</div>
+        <article className="intro">
+          <div className="kicker">{a.category}</div>
           <h1 className="h-display mt-3 text-[34px] leading-tight sm:text-[46px]">{a.title}</h1>
           <p className="mt-4 text-lg leading-relaxed text-cream-dim">{a.excerpt}</p>
           <div className="mt-5 flex items-center gap-4 font-mono text-[11.5px] text-cream-mute">

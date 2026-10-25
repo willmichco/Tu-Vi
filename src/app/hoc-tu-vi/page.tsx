@@ -14,7 +14,7 @@ export default function Page() {
   return (
     <div className="relative">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-[420px] grid-bg" />
-      <div className="container-x relative py-12 sm:py-16">
+      <div className="intro container-x relative py-12 sm:py-16">
         <nav aria-label="Breadcrumb" className="font-mono text-[11px] text-cream-mute">
           <Link href="/" className="hover:text-cream">
             Trang chủ

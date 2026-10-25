@@ -4,6 +4,7 @@ import { SectionHead } from "@/components/ui/Section";
 import { Faq } from "@/components/ui/Faq";
 import { addons, vnd } from "@/lib/site";
 import { TinhDuyenClient } from "./TinhDuyenClient";
+import { Sky } from "@/components/motion/Sky";
 
 export const metadata: Metadata = {
   title: "Xem tử vi tình duyên hai người — đối chiếu hai lá số, không chấm điểm",
@@ -30,16 +31,16 @@ const faq = [
 export default function Page() {
   return (
     <>
-      <section className="relative overflow-hidden">
-        <div className="pointer-events-none absolute inset-0 starfield opacity-60" />
+      <section className="relative -mt-16 overflow-hidden pt-16">
+        <Sky />
         <div className="pointer-events-none absolute -top-40 right-0 size-[700px] glow-rose" />
         <div className="container-x relative py-14 lg:py-20">
-          <div className="max-w-3xl">
-            <span className="eyebrow !text-rose">Tử vi tình duyên</span>
+          <div className="intro max-w-3xl">
+            <span className="kicker !text-rose">Tử vi tình duyên</span>
             <h1 className="h-display mt-4 text-[40px] leading-[1.08] sm:text-[56px]">
               Đọc hai người qua hai lá số.
               <br />
-              <span className="text-gold-gradient">Không có điểm số nào ở đây.</span>
+              <span className="h-accent text-gold-gradient">Không có điểm số nào ở đây.</span>
             </h1>
             <p className="mt-5 max-w-2xl text-[17px] leading-relaxed text-cream-dim">
               Đặt hai lá số cạnh nhau để thấy nhịp sống của mỗi người, chỗ dễ hiểu nhau, chỗ dễ va nhau, và mười năm tới mỗi người đang đi

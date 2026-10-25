@@ -20,11 +20,7 @@ export function SiteHeader() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
   useEffect(() => {
-    const previous = document.body.style.overflow;
-    if (open) document.body.style.overflow = "hidden";
-    const close = (event: KeyboardEvent) => { if (event.key === "Escape") setOpen(false); };
-    window.addEventListener("keydown", close);
-    return () => { document.body.style.overflow = previous; window.removeEventListener("keydown", close); };
+    document.body.style.overflow = open ? "hidden" : "";
   }, [open]);
 
   return (
@@ -41,7 +37,6 @@ export function SiteHeader() {
             return (
               <Link
                 key={item.href}
-                aria-current={pathname?.startsWith(item.href) ? "page" : undefined}
                 href={item.href}
                 className={`rounded-full px-3 py-1.5 text-sm transition ${
                   active ? "bg-white/[0.06] text-cream" : "text-cream-dim hover:text-cream"
@@ -78,7 +73,6 @@ export function SiteHeader() {
             {nav.map((item, i) => (
               <Link
                 key={item.href}
-                aria-current={pathname?.startsWith(item.href) ? "page" : undefined}
                 href={item.href}
                 className="flex items-baseline gap-4 border-b border-[var(--line)] py-4 text-xl font-serif text-cream"
               >

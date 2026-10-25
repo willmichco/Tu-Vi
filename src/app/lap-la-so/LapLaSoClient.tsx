@@ -12,8 +12,8 @@ export function LapLaSoClient() {
 
   return (
     <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-[minmax(0,480px)_1fr] lg:gap-12">
-      <div className="paper-section form-workbench">
-        <div className="form-heading"><span className="eyebrow">THÔNG TIN CỦA BẠN</span><h2>Khởi tạo lá số</h2><p>Điền ngày và giờ sinh để khám phá thiên bàn của riêng bạn.</p></div><BirthForm onPreview={onPreview} />
+      <div className="card p-5 sm:p-7">
+        <BirthForm onPreview={onPreview} />
       </div>
       <div className="lg:sticky lg:top-24">
         <div className="mb-3 flex items-center justify-between">
